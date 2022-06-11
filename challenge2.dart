@@ -7,7 +7,7 @@
  * greet("Hamza") logs "Hello Hamza"
  */
 void greet(String name) {
-  // Your code here
+  print("Hello $name");
 }
 
 /**
@@ -20,7 +20,12 @@ void greet(String name) {
  * isOdd(10) -> false
  */
 bool isOdd(int n) {
-  // Your code here
+  if (n % 2 != 0) {
+    return true;
+  } else {
+    return false;
+  }
+  // return n % 2 != 0;
 }
 
 /**
@@ -33,7 +38,13 @@ bool isOdd(int n) {
  * oddsSmallerThan(15) -> 7
  */
 int oddsSmallerThan(int n) {
-  // Your code here
+  if (isOdd(n)) {
+    return ((n - 1) ~/ 2);
+  } else {
+    return n ~/ 2;
+  }
+
+  // return (n / 2);
 }
 
 /**
@@ -47,5 +58,9 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(9) -> 81
  */
 int squareOrDouble(int n) {
-  // Your code here
+  if (isOdd(n)) {
+    return n * n;
+  } else {
+    return n * 2;
+  }
 }
